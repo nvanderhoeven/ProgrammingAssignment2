@@ -25,9 +25,9 @@ cacheSolve <- function(x, ...) {
     message("getting cached data")
     return(inv_x)
   }
-  data <- x$get
+  data <- x$get()
   inv_ <- solve(data)
-  x$setinverse(inv_)
+  x$setinverse(inv_x)
   inv
 }
-}
+
